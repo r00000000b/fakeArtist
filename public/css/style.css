@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#canvas {
+  height: 500px;
+}
+
+#messages {
+  height: 300px;
+  border: 1px #000 solid;
+}
+
+#userlist {
+  height: 300px;
+  border: 1px #000 solid;
+}
+
+#m {
+  width: 90%;
+}

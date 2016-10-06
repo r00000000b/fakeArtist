@@ -1,0 +1,14 @@
+extends base/layout
+
+block main
+  .container
+    .row
+      #canvas.col-sm-12
+    .row
+      .col-sm-12
+        ul#messages.col-sm-9(action='')
+        ul#userlist.col-sm-3(action='')
+        form#chatmsg(action='')
+          .form-group
+            input#m.col-sm-12(type='text', autocomplete='off')
+            button Send
