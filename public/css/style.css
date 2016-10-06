@@ -6,7 +6,7 @@ html, body {
   overflow: hidden;
 }
 
-#canvas {
+/*#canvas {
   height: 500px;
 }
 
@@ -22,4 +22,8 @@ html, body {
 
 #m {
   width: 90%;
+}*/
+
+#drawing {
+  display: block;
 }
