@@ -3,6 +3,8 @@ module.exports = function(app, io) {
   var module = {};
   var connections = [];
   var loggedIn = [];
+  var drawHistory = [];
+  var chatHistory = [];
 
   io.on('connection', function (socket) {
 

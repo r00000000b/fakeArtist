@@ -1,28 +1,21 @@
-function draw(){
-  var ctx = document.getElementById('drawing').getContext('2d');
-}
-
-window.onload = draw;
-
 var canvas = document.getElementById('drawing');
 var ctx = canvas.getContext('2d');
 
 var radius = 10;
 var dragging = false;
 
-ctx.lineWidth = radius*2;
-
-var width = window.innerWidth;
-var height = window.innerHeight;
-canvas.width = width;
-canvas.height = height;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 var putPoint = function(e){
   if (dragging) {
       ctx.lineTo(e.clientX, e.clientY);
+      ctx.lineWidth = radius*2;
+      ctx.strokeStyle = '#ff0000';
       ctx.stroke();
       ctx.beginPath();
-      ctx.arc(e.clientX, e.clientY, radius, 0, Math.Pi*2);
+      ctx.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
+      ctx.fillStyle = '#ff0000';
       ctx.fill();
       ctx.beginPath();
       ctx.moveTo(e.clientX, e.clientY);
