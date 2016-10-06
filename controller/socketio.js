@@ -8,6 +8,15 @@ module.exports = function(app, io) {
 
   io.on('connection', function (socket) {
 
+    for (var i in drawHistory) {
+      socket.emit('draw_line', { line: drawHistory[i] } );
+    }
+
+    socket.on('draw_line', function (data) {
+      drawHistory.push(data.line);
+      io.emit('draw_line', { line: data.line });
+    });
+
     connections.push(socket);
     console.log('connected: %s sockets connected', connections.length);
 
