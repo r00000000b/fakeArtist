@@ -1,0 +1,18 @@
+extends base/layout
+
+block main
+  .mdl-layout.mdl-js-layout
+    header.mdl-layout__header
+      .mdl-layout-icon
+      .mdl-layout__header-row
+        span.mdl-layout__title Fake Artist
+        .mdl-layout-spacer
+        nav.mdl-navigation
+          a#signup.mdl-navigation__link(href='/signup') Sign Up
+          a#login.mdl-navigation__link(href='/login') Login
+    .mdl-layout__drawer
+      span.mdl-layout__title Fake Artist
+      nav.mdl-navigation
+        a.mdl-navigation__link(href='/signup') Sign Up
+        a.mdl-navigation__link(href='/login') Login
+    main.mdl-layout__content

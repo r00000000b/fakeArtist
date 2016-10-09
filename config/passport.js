@@ -8,10 +8,10 @@ var validator = require('validator');
 // Load user model
 var User = require('../model/user');
 
-module.exports = function( passport ) {
+module.exports = function(passport) {
 
   // Serialize user
-  passport.serializeUser( function( user, done){
+  passport.serializeUser( function(user, done){
       done(null, user.id);
   });
 
@@ -28,7 +28,7 @@ module.exports = function( passport ) {
       passwordField : 'password',
       passReqToCallback: true
     },
-    function( req, email, password, done){
+    function(req, email, password, done){
 
         // Check that the email is in the right format
         if( !validator.isEmail(email) ){
@@ -74,7 +74,7 @@ module.exports = function( passport ) {
       passwordField : 'password',
       passReqToCallback: true
     },
-    function( req, email, password, done){
+    function(req, email, password, done){
         process.nextTick(function(){
           User.findOne( {'local.email' : email }, function(err, user){
             if(err){

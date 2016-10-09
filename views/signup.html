@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Artist</title>
+  <link rel="stylesheet" href="../public/lib/css/material.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout__title">Fake Artist</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a id="signup" class="mdl-navigation__link" href="/signup">Sign Up</a>
+        <a id="login" class="mdl-navigation__link" href="/login">Login</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout__title">Fake Artist</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/signup">Sign Up</a>
+      <a class="mdl-navigation__link" href="/login">Login</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--5-col"></div>
+      <div class="mdl-card mdl-shadow--2dp mdl-cell--2-col">
+        <div class="mdl-card__title" id="signupBox">
+          <h2 class="mdl-card__title-text">Sign Up</h2>
+        </div>
+        <div>
+          <form class="mdl-card__supporting-text" action="#" method="POST">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="email" name="email" pattern="[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
+              <label class="mdl-textfield__label">Email</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="password" id="password" name="password">
+              <label class="mdl-textfield__label">Password</label>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button type="submit" class="mdl-button mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--5-col"></div>
+    </div>
+  </main>
+</div>
+</body>
+<script src="../public/lib/js/jquery-2.2.3.min.js"></script>
+<script src="../public/lib/js/material.min.js"></script>
+<script src="../public/js/script.js"></script>
+</html>

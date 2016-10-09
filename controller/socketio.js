@@ -5,16 +5,18 @@ module.exports = function(app, io) {
   var loggedIn = [];
   var drawHistory = [];
   var chatHistory = [];
+  var color = '';
 
   io.on('connection', function (socket) {
 
     for (var i in drawHistory) {
-      socket.emit('draw_line', { line: drawHistory[i] } );
+      socket.emit('drawLine', { line: drawHistory[i] } );
     }
 
-    socket.on('draw_line', function (data) {
+    socket.on('drawLine', function (data) {
+      var colour = color;
       drawHistory.push(data.line);
-      io.emit('draw_line', { line: data.line });
+      io.emit('drawLine', { line: data.line, colour: data.colour });
     });
 
     connections.push(socket);

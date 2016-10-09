@@ -12,7 +12,75 @@ block main
   //-         .form-group
   //-           input#m.col-sm-12(type='text', autocomplete='off')
   //-           button Send
-  canvas#drawing This game requires Canvas. Please try another browser to play!
+  .mdl-layout.mdl-js-layout
+      header.mdl-layout__header
+        .mdl-layout-icon
+        .mdl-layout__header-row
+          span.mdl-layout__title Fake Artist
+          .mdl-layout-spacer
+          nav.mdl-navigation
+            a#signup.mdl-navigation__link(href='/signup') Sign Up
+            a#login.mdl-navigation__link(href='/login') Login
+      .mdl-layout__drawer
+        span.mdl-layout__title Fake Artist
+        nav.mdl-navigation
+          a.mdl-navigation__link(href='/signup') Sign Up
+          a.mdl-navigation__link(href='/login') Login
+      main.mdl-layout__content
+        .mdl-grid
+          .mdl-cell.mdl-cell--2-col
+          .mdl-cell.mdl-card.mdl-cell--2-col.mdl-shadow--2dp
+            #colorCard.mdl-card__title
+              h5.mdl-card_title-text Tools
+            .mdl-card__supporting-text
+              | Choose from 20 Material Design brush colors!
+            .mdl-card__actions.mdl-card--border
+              button#red.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--red.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#pink.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--pink.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#purple.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--purple.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#deep-purple.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--deep-purple.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#indigo.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--indigo.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#blue.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--blue.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#light-blue.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--light-blue.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#cyan.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--cyan.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#teal.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--teal.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#green.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--green.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#light-green.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--light-green.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#lime.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--lime.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#yellow.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--yellow.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#amber.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--amber.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#orange.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--orange.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#deep-orange.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--deep-orange.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#brown.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--brown.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#grey.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--grey.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#blue-grey.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--blue-grey.mdl-shadow--2dp.color(type='button')
+                i.material-icons brush
+              button#black.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-color--black.mdl-shadow--2dp.color(type='button', disabled='')
+                i.material-icons brush
+            .mdl-card__actions.mdl-card--border
+              button#clear.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent Clear Canvas
+          .mdl-cell.mdl-cell--4-col
+            canvas#drawing.mdl-shadow--2dp
+          .mdl-cell.mdl-cell--1-col
+          .mdl-cell.mdl-cell--3-col
 block script
   // Canvas script
   script(type='text/javascript', src='./js/canvas.js')

@@ -5,21 +5,26 @@ module.exports = function(app, passport){
   function isLoggedIn(req, res, next) {
 
     if(req.isAuthenticated()) {
-      console.log(req.user);
-      console.log('hi' + req.user.local.username)
+      // console.log(req.user);
+      // console.log('hi' + req.user.local.username)
       return next();
     }
 
     res.redirect('/')
   }
 
-  // Sign up
+  // Index
   app.get('/', function(req, res){
+    res.render('index', { message: req.flash('loginMessage') });
+  });
+
+  // Sign up
+  app.get('/signup', function(req, res){
     res.render('signup', { message: req.flash('loginMessage') });
   });
 
   // Signed up
-  app.post('/', passport.authenticate('local-signup', {
+  app.post('/signup', passport.authenticate('local-signup', {
     successRedirect : '/social',
     failureRedirect : '/',
     failureFlash: true
@@ -50,7 +55,7 @@ module.exports = function(app, passport){
 
   // test
   app.get('/test', function(req, res){
-    res.send('Hi' + req.user);
+    res.render('test', {message: req.flash('loginMessage') })
   });
 
 

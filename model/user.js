@@ -7,13 +7,16 @@ var userSchema = mongoose.Schema({
     local            : {
         username     : String,
         email        : String,
-        password     : String
+        password     : String,
+        color        : String
     },
     facebook         : {
         id           : String,
         token        : String,
         email        : String,
-        name         : String
+        name         : String,
+        username     : String,
+        color        : String
     },
     twitter          : {
         id           : String,
@@ -21,13 +24,16 @@ var userSchema = mongoose.Schema({
         tokenSecret  : String,
         displayName  : String,
         username     : String,
-        img          : String
+        img          : String,
+        color        : String
     },
     google           : {
         id           : String,
         token        : String,
         email        : String,
-        name         : String
+        name         : String,
+        username     : String,
+        color        : String
     }
 
 });

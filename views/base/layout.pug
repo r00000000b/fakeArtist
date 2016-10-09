@@ -7,25 +7,31 @@ html(lang='en')
     title Fake Artist
     // Font Awesome
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css')
-    // Bootstrap core CSS
-    link(href='lib/css/bootstrap.min.css', rel='stylesheet')
-    // Material Design Bootstrap
-    link(href='lib/css/mdb.min.css', rel='stylesheet')
+    //- // Bootstrap core CSS
+    //- link(href='lib/css/bootstrap.min.css', rel='stylesheet')
+    // Material Design Lite
+    link(rel='stylesheet', href='https://code.getmdl.io/1.2.1/material.purple-amber.min.css')
     // Custom styles
     link(href='css/style.css', rel='stylesheet')
+    // Material Icons
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    // Roboto Font
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700', type='text/css')
   body
     block main
 
     // JQuery
     script(type='text/javascript', src='lib/js/jquery-2.2.3.min.js')
-    // Bootstrap tooltips
-    script(type='text/javascript', src='lib/js/tether.min.js')
-    // Bootstrap core JavaScript
-    script(type='text/javascript', src='lib/js/bootstrap.min.js')
-    // MDB core JavaScript
-    script(type='text/javascript', src='lib/js/mdb.min.js')
+    //- // Bootstrap tooltips
+    //- script(type='text/javascript', src='lib/js/tether.min.js')
+    //- // Bootstrap core JavaScript
+    //- script(type='text/javascript', src='lib/js/bootstrap.min.js')
+    // Material Design Lite
+    script(defer='', src='https://code.getmdl.io/1.2.1/material.min.js')
     // socket
     script(type='text/javascript', src='/socket.io/socket.io.js')
+    //generic scripts
+    script(src='../public/js/script.js')
 
     // Local script
     block script

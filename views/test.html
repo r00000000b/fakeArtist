@@ -2,27 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="../public/lib/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../public/lib/css/mdb.min.css">
+  <title>Fake Artist</title>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.purple-amber.min.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8"></div>
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout__title">Fake Artist</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a id="signup" class="mdl-navigation__link" href="/signup">Sign Up</a>
+        <a id="login" class="mdl-navigation__link" href="/login">Login</a>
+      </nav>
     </div>
-    <div class="row">
-      <div class="col-sm-8">
-        <ul class="col-sm-8" id="chatmsg" action></ul>
-        <form class="col-sm-8" action=""></form>
-        <input class="col-sm-8" type="text" id="m" autocomplete="off">
-        <button>Send</button>
-      </div>
-    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout__title">Fake Artist</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/signup">Sign Up</a>
+      <a class="mdl-navigation__link" href="/login">Login</a>
+    </nav>
   </div>
+  <main class="mdl-layout__content">
+
+  </main>
+</div>
 </body>
 <script src="../public/lib/js/jquery-2.2.3.min.js"></script>
-<script src="../public/lib/js/tether.min.js"></script>
-<script src="../public/lib/js/bootstrap.min.js"></script>
-<script src="../public/lib/js/mdb.min.js"></script>
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script><script src="./js/script.js"></script>
 </html>

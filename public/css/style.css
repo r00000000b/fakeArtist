@@ -8,11 +8,13 @@ html, body {
 
 /*#canvas {
   height: 500px;
-}
+}*/
 
 #messages {
   height: 300px;
   border: 1px #000 solid;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 #userlist {
@@ -20,10 +22,108 @@ html, body {
   border: 1px #000 solid;
 }
 
-#m {
+/*#m {
   width: 90%;
 }*/
 
 #drawing {
   display: block;
+}
+
+#signupBox {
+  color: #EA80FC;
+  background-color: #4A148C;
+}
+
+/*.grid {
+  background-color: #4A148C;
+}*/
+
+#colorCard {
+  color: #EA80FC;
+  background-color: #4A148C;
+}
+
+#black {
+  color: #FFFFFF;
+}
+
+#blue-grey {
+  color: #B0BEC5;
+}
+
+#grey {
+  color: #EEEEEE;
+}
+
+#brown {
+  color: #BCAAA4;
+}
+
+#deep-orange {
+  color: #FFAB91;
+}
+
+#orange {
+  color: #FFCC80;
+}
+
+#amber {
+  color: #FFE082;
+}
+
+#yellow {
+  color: #FFF59D;
+}
+
+#lime {
+  color: #E6EE9C;
+}
+
+#light-green {
+  color: #C5E1A5;
+}
+
+#green {
+  color: #A5D6A7;
+}
+
+#teal {
+  color: #80CBC4;
+}
+
+#cyan {
+  color: #80DEEA;
+}
+
+#light-blue {
+  color: #81D4FA;
+}
+
+#blue {
+  color: #90CAF9;
+}
+
+#indigo {
+  color: #9FA8DA;
+}
+
+#deep-purple {
+  color: #B39DDB;
+}
+
+#purple {
+  color: #CE93D8;
+}
+
+#pink {
+  color: #F48FB1;
+}
+
+#red {
+  color: #EF9A9A;
+}
+
+.color {
+  margin: 2px;
 }

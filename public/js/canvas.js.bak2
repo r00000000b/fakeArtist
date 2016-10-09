@@ -10,22 +10,20 @@ $(document).ready(function(){
    var ctx = canvas.getContext('2d');
    var width = window.innerWidth;
    var height = window.innerHeight;
-   var radius = 5;
+   var radius = 10;
 
    // setting ratio of canvas to all displays
-   canvas.width = (width/3)-24;
-   canvas.height = (canvas.width/4)*3;
+   canvas.width = height*1.77777777777778;
+   canvas.height = height;
 
    // register mouse event handlers
    canvas.onmousedown = function(e){ mouse.click = true; };
    canvas.onmouseup = function(e){ mouse.click = false; };
 
    canvas.onmousemove = function(e) {
-      // making positions appear the 'same' on different resolution screens.
-      mouse.pos.x = (e.clientX - document.getElementById("drawing").getBoundingClientRect().left)/width;
-      mouse.pos.y = (e.clientY - document.getElementById("drawing").getBoundingClientRect().top)/height;
-      // mouse.pos.x = e.clientX / width;
-      // mouse.pos.y = e.clientY / height;
+      // making positions appear the 'same' on different screens.
+      mouse.pos.x = e.clientX / width;
+      mouse.pos.y = e.clientY / height;
       mouse.move = true;
    };
 
@@ -33,19 +31,16 @@ $(document).ready(function(){
   socket.on('drawLine', function (data) {
       var line = data.line;
       var useColor = data.colour;
-      console.log('hi')
       ctx.beginPath();
       ctx.moveTo(line[0].x * width, line[0].y * height);
       ctx.lineTo(line[1].x * width, line[1].y * height);
-      // ctx.moveTo(line[0].x * width, line[0].y * height);
-      // ctx.lineTo(line[1].x * width, line[1].y * height);
       ctx.lineWidth = radius*2;
       ctx.lineCap = 'round';
       // ctx.strokeStyle = useColor;
       ctx.stroke();
    });
 
-   // main loop, runs every 30ms
+   // main loop, running every 25ms
    function mainLoop() {
       // check if the user is drawing
       if (mouse.click && mouse.move && mouse.pos_prev) {
@@ -54,7 +49,7 @@ $(document).ready(function(){
          mouse.move = false;
       }
       mouse.pos_prev = {x: mouse.pos.x, y: mouse.pos.y};
-      setTimeout(mainLoop, 30);
+      setTimeout(mainLoop, 25);
    }
    mainLoop();
 });

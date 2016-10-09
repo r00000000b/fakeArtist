@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Artist</title>
+  <link rel="stylesheet" href="../public/lib/css/material.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout__title">Fake Artist</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a id="signup" class="mdl-navigation__link" href="/signup">Sign Up</a>
+        <a id="login" class="mdl-navigation__link" href="/login">Login</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout__title">Fake Artist</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/signup">Sign Up</a>
+      <a class="mdl-navigation__link" href="/login">Login</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col"></div>
+      <div class="mdl-cell mdl-card mdl-cell--2-col mdl-shadow--2dp">
+        <div id="colorCard" class="mdl-card__title">
+          <h5 class="mdl-card_title-text">Color Picker</h5>
+        </div>
+        <div class="mdl-card__supporting-text">
+          Choose from 20 Material Design brush colors!
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <button id="red" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--red mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="pink" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--pink mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="purple" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--purple mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="deep-purple" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--deep-purple mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="indigo" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--indigo mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="blue" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--blue mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="light-blue" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--light-blue mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="cyan" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--cyan mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="teal" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--teal mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="green" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--green mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="light-green" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--light-green mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="lime" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--lime mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="yellow" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--yellow mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="amber" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--amber mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="orange" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--orange mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="deep-orange" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--deep-orange mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="brown" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--brown mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="grey" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--grey mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="blue-grey" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--blue-grey mdl-shadow--2dp color">
+            <i class="material-icons">brush</i>
+          </button>
+          <button id="black" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--black mdl-shadow--2dp color" disabled>
+            <i class="material-icons">brush</i>
+          </button>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Clear Canvas</button>
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <canvas id="drawing" class="mdl-shadow--2dp"></canvas>
+      </div>
+      <div class="mdl-cell mdl-cell--1-col">
+
+      </div>
+      <div class="mdl-cell mdl-cell--3-col"></div>
+    </div>
+
+  </main>
+</div>
+</body>
+<script src="../public/lib/js/jquery-2.2.3.min.js"></script>
+<script src="../public/lib/js/material.min.js"></script>
+<script src="../public/js/script.js"></script>
+</html>
