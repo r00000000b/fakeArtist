@@ -42,18 +42,3 @@ var $grey = $('grey');
 var $blueGrey = $('blue-grey');
 var $black = $('#black');
 var $clear = $('#clear');
-
-var disabled = $black;
-
-// colorChoose = document.querySelectorAll(".color");
-// console.log(colorChoose)
-
-// colorChoose.on('click', function(e){
-//   console.log(e);
-//   disabled.removeAttribute(disabled);
-//   $(e).setAttribute('disabled');
-// })
-
-document.getElementById('clear').addEventListener('click', function(){
-  ctx.clearRect(0,0,canvas.width,canvas.height)
-})
