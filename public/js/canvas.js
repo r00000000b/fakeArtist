@@ -39,67 +39,78 @@ $(document).ready(function(){
     //    userColor = swatchRed;
     //    console.log(userColor);
     // }
+    console.log(disabledColor);
+    enable(disabledColor);
+    console.log(disabledColor);
+    disabledColor = this.id;
+    console.log(disabledColor);
+    this.disabled = true;
+    console.log(e.currentTarget.id);
+
     switch(e.currentTarget.id) {
-       case 'red':
-          userColor = swatchRed;
-          break;
-       case 'pink':
-          userColor = swatchPink;
-          break;
-       case 'purple':
-          userColor = swatchPurple;
-          break;
-       case 'deep-purple':
-          userColor = swatchDeepPurple;
-          break;
-       case 'indigo':
-          userColor = swatchIndigo;
-          break;
-       case 'blue':
-          userColor = swatchBlue;
-          break;
-       case 'light-blue':
-          userColor = swatchLightBlue;
-          break;
-       case 'cyan':
-          userColor = swatchCyan;
-          break;
-       case 'teal':
-          userColor = swatchTeal;
-          break;
-       case 'green':
-          userColor = swatchGreen;
-          break;
-       case 'light-green':
-          userColor = swatchLightGreen;
-          break;
-       case 'lime':
-          userColor = swatchLime;
-          break;
-       case 'yellow':
-          userColor = swatchYellow;
-          break;
-       case 'amber':
-          userColor = swatchAmber;
-          break;
-       case 'orange':
-          userColor = swatchOrange;
-          break;
-       case 'deep-orange':
-          userColor = swatchDeepOrange;
-          break;
-       case 'brown':
-          userColor = swatchBrown;
-          break;
-       case 'grey':
-          userColor = swatchGrey;
-          break;
-       case 'blue-grey':
-          userColor = swatchBlueGrey;
-          break;
-       case 'black':
-          userColor = swatchBlack;
-          break;
+      case 'red':
+        userColor = swatchRed;
+        break;
+      case 'pink':
+        userColor = swatchPink;
+        break;
+      case 'purple':
+        userColor = swatchPurple;
+        break;
+      case 'deep-purple':
+        userColor = swatchDeepPurple;
+        break;
+      case 'indigo':
+        userColor = swatchIndigo;
+        break;
+      case 'blue':
+        userColor = swatchBlue;
+        break;
+      case 'light-blue':
+        userColor = swatchLightBlue;
+        break;
+      case 'cyan':
+        userColor = swatchCyan;
+        break;
+      case 'teal':
+        userColor = swatchTeal;
+        break;
+      case 'green':
+        userColor = swatchGreen;
+        break;
+      case 'light-green':
+        userColor = swatchLightGreen;
+        break;
+      case 'lime':
+        userColor = swatchLime;
+        break;
+      case 'yellow':
+        userColor = swatchYellow;
+        break;
+      case 'amber':
+        userColor = swatchAmber;
+        break;
+      case 'orange':
+        userColor = swatchOrange;
+        break;
+      case 'deep-orange':
+        userColor = swatchDeepOrange;
+        break;
+      case 'brown':
+        userColor = swatchBrown;
+        break;
+      case 'grey':
+        userColor = swatchGrey;
+        break;
+      case 'blue-grey':
+        userColor = swatchBlueGrey;
+        break;
+      case 'black':
+        userColor = swatchBlack;
+        break;
+      default:
+        console.log('default reached');
+        break;
     }
   })
 
@@ -117,7 +128,8 @@ $(document).ready(function(){
       // ctx.lineTo(line[1].x * width, line[1].y * height);
       ctx.lineWidth = radius*2;
       ctx.lineCap = 'round';
-      ctx.strokeStyle = userColor;
+      ctx.strokeStyle = line[2];
+      // ctx.strokeStyle = userColor;
       ctx.stroke();
   });
 
@@ -126,7 +138,7 @@ $(document).ready(function(){
      // check if the user is drawing
      if (mouse.click && mouse.move && mouse.pos_prev) {
         // send line to to the server
-        socket.emit('drawLine', { line: [ mouse.pos, mouse.pos_prev ] });
+        socket.emit('drawLine', { line: [ mouse.pos, mouse.pos_prev, userColor] });
         mouse.move = false;
      }
      mouse.pos_prev = {x: mouse.pos.x, y: mouse.pos.y};

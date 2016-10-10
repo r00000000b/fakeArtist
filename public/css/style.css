@@ -11,20 +11,22 @@ html, body {
 }*/
 
 #messages {
-  height: 300px;
-  border: 1px #000 solid;
-  overflow: auto;
-  overflow-x: hidden;
+  height: 150px;
+  width: 90%;
+  overflow: scroll;
+  list-style: none;
+  overflow-x: auto;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 #userlist {
-  height: 300px;
-  border: 1px #000 solid;
+  height: 100%;
 }
 
-/*#m {
-  width: 90%;
-}*/
+#m {
+  width: 100%;
+}
 
 #drawing {
   display: block;
@@ -40,6 +42,11 @@ html, body {
 }*/
 
 #colorCard {
+  color: #EA80FC;
+  background-color: #4A148C;
+}
+
+#chatCard {
   color: #EA80FC;
   background-color: #4A148C;
 }
@@ -73,7 +80,7 @@ html, body {
 }
 
 #yellow {
-  color: #FFF59D;
+  color: #FBC02D;
 }
 
 #lime {
@@ -126,4 +133,17 @@ html, body {
 
 .color {
   margin: 2px;
+}
+
+#nickWrapper {
+  display: initial;
+}
+
+#userbox {
+  height: 150px;
+}
+
+#usersHeader {
+  display: block;
+  margin: 0 auto;
 }
